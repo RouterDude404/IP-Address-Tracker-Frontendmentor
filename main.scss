@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$veryGrey: hsl(0, 0%, 17%);
+$darkGrey: hsl(0, 0%, 59%);
+$fw-400: 400;
+$fw-500: 500;
+$fw-700: 700;
+
+
+
+body {
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif;
+}
+
+.header {
+  background-image: url('/images/pattern-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 32vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1.4em;
+}
+
+.primaryHeader {
+  color: $white;
+  font-size: 2rem;
+  font-weight: $fw-500;
+}
+
+#map {
+  width: 100%;
+  height: 68vh;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.searchBar input {
+  height: 50px;
+  width: 30em;
+  padding: 0 0 0 1.5em;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  font-size: clamp(1rem, -0.875rem + 7.333vw, 1.2rem);
+}
+
+.searchBar__btn {
+  height: 50px;
+  min-width: 50px;
+  background-color: $black;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  border: none;
+}
+
+.searchBar__btn:hover {
+  background-color: $veryGrey;
+}
+
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.arrow {
+  height: 15px;
+  width: 15px;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.boxWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  background-color: $white;
+  font-weight: $fw-500;
+  z-index: 1000;
+  border-radius: 10px;
+  padding: 2em;
+  gap: 1em;
+  width: 65vw;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.223);
+  h2 {
+    font-size: .8rem;
+    color: $darkGrey;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+    font-weight: $fw-700;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  .box {
+    width: 90%;
+    border-right: 1px solid rgb(187, 186, 186);
+  }
+  .box:last-child {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .box {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .boxWrapper {
+    min-width: 16em;
+  }
+}

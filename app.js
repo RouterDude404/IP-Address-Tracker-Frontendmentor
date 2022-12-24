@@ -13,7 +13,7 @@ const Stadia_OSMBright = L.tileLayer(
 ).addTo(map);
 
 const myIcon = L.icon({
-  iconUrl: "/images/icon-location.svg",
+  iconUrl: "images/icon-location.svg",
 });
 
 newMarker = L.marker([15, 16], {

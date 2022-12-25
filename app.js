@@ -3,7 +3,7 @@ const searchInput = document.querySelector(".searchInput");
 
 let map = L.map("map").setView([15, 16], 15);
 
-const Stadia_OSMBright = L.tileLayer(
+L.tileLayer(
   "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png",
   {
     maxZoom: 20,
@@ -13,7 +13,7 @@ const Stadia_OSMBright = L.tileLayer(
 ).addTo(map);
 
 const myIcon = L.icon({
-  iconUrl: "images/icon-location.svg",
+  iconUrl: "../images/icon-location.svg",
 });
 
 newMarker = L.marker([15, 16], {

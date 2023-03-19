@@ -40,7 +40,6 @@ searchButton.addEventListener("click", () => {
 });
 
 async function getIpInfo(ip) {
-  let apiKey = 'at_e65d5UEGO5zjXOWmMUYgJ2xiOGzpS';
   const response = await fetch(
     `https://geo.ipify.org/api/v2?apiKey=${apiKey}&ipAddress=${ip}`
   );
